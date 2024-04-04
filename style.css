@@ -11,6 +11,7 @@ body {
     background-color: rgb(255, 221, 0) ;
     border: solid 4px black;
     border-radius: 4px;
+    margin-top: 10px;
 }  
 
 .title {
