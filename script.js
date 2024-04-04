@@ -6,7 +6,7 @@ const resetEl = document.getElementById("reset")
 const timerEl = document.getElementById("timer")
 
 let interval;
-let timeLeft = 10; // 25mins converted to seconds
+let timeLeft = 1500; // 25mins converted to seconds
 
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60)
@@ -26,14 +26,19 @@ function startTimer() {
         clearInterval(interval);
         alert("Great work! Time for a break.");
         timeLeft = 1500;
+        updateTimer();
     }
     }, 1000)
 }
+
 function stopTimer() {
-    console.log("stop")
+    clearInterval(interval);
 }
+
 function resetTimer() {
-    console.log("reset")
+    clearInterval(interval);
+    timeLeft = 1500;
+    updateTimer();
 }
 
 startEl.addEventListener("click", startTimer)
