@@ -6,12 +6,12 @@ const resetEl = document.getElementById("reset")
 const timerEl = document.getElementById("timer")
 
 let interval;
-let timeLeft = 1500; // 25mins converted to seconds
+let timeLeft = 10; // 25mins converted to seconds
 
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60)
     let seconds = timeLeft % 60
-    let formattedTime = minutes + ":" + seconds
+    let formattedTime = `${minutes.toString().padStart(2, "0")} : ${seconds.toString().padStart(2, "0")}`;
 
 
     timerEl.innerHTML = formattedTime
@@ -22,6 +22,11 @@ function startTimer() {
     interval = setInterval(() => {
         timeLeft--;
         updateTimer();
+    if (timeLeft === 0) {
+        clearInterval(interval);
+        alert("Great work! Time for a break.");
+        timeLeft = 1500;
+    }
     }, 1000)
 }
 function stopTimer() {
