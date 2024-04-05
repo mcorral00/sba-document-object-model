@@ -1,7 +1,7 @@
 console.log("hello World");
 
-const startEl = document.getElementById("start");
-const stopEl = document.getElementById("stop");
+const startEl = window.document.getElementById("start");
+const stopEl = window.document.getElementById("stop");
 const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
 
@@ -45,6 +45,18 @@ startEl.addEventListener("click", startTimer);
 stopEl.addEventListener("click", stopTimer);
 resetEl.addEventListener("click", resetTimer);
 
+const button = document.getElementById("reset");
+
+button.addEventListener("mouseover", function() {
+  button.style.backgroundColor = "#708090";  // Change background on hover
+});
+
+button.addEventListener("mouseout", function() {
+    button.style.backgroundColor = "#2a3845";  // Revert to original color
+  });
+
+//cache the body element
+let bodyElement = document.querySelector("body")
 
 // Create a new div element
 let newDiv = document.createElement("div");
@@ -64,12 +76,6 @@ newDiv.style.margin = "0 auto"
 newDiv.style.marginTop = "10px"
 newDiv.innerHTML = "The Five main advatanges of the Pomodoro Technique";
 
-
-
-// margin: 0 auto;
-// max-width: 500px;
-// text-align: center;
-
 // Append the div to the document body
-document.body.appendChild(newDiv);
+bodyElement.appendChild(newDiv);
 
