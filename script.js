@@ -65,7 +65,7 @@ let newDiv = document.createElement("div");
 newDiv.id = "myDiv";
 newDiv.className = "customDiv";
 newDiv.style.width = "520px";
-newDiv.style.height = "100px";
+newDiv.style.height = "150px";
 newDiv.style.backgroundColor = "#708090";
 newDiv.style.fontFamily = "sans-serif"
 newDiv.style.color = "white";
@@ -74,7 +74,7 @@ newDiv.style.border = "4px solid black"
 newDiv.style.borderRadius = "4px";
 newDiv.style.margin = "0 auto"
 newDiv.style.marginTop = "10px"
-newDiv.innerHTML = "The Five main advatanges of the Pomodoro Technique";
+newDiv.innerHTML = "Five main advatanges of the Pomodoro Technique: <br> <br> Encourages focused work. <br> Helps you get started. <br> Manage distractions and control your time. <br> Reduces stress and anxiety. <br> Maintain motivation.";
 
 // Append the div to the document body
 bodyElement.appendChild(newDiv);
